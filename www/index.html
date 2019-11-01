@@ -10,7 +10,8 @@
     <!-- boostrap  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- bootstrap jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"  crossorigin="anonymous"></script>
+      <script src="components/acao.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- angular js -->
@@ -37,17 +38,15 @@
                 <!-- nome -->
                 <div class="form-group">
                   <div class="input-group input-group-lg">
-                    <input type="text" class="form-control bg-dark text-center" placeholder="Nome Do Restaurante" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control bg-dark text-center" name="nameRestaurant"placeholder="Nome Do Restaurante" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
                 </div>
                 <!-- categorias -->
                 <div class="input-group mb-3">
                   <div class="input-group input-group-lg">  
-                    <select class="custom-select  bg-dark" id="inputGroupSelect01">
+                    <select class="custom-select  bg-dark" id="listaMenu">
                       <option selected>Categoria...</option>
-                      <option value="1">Um</option>
-                      <option value="2">Dois</option>
-                      <option value="3">Três</option>
+
                     </select>
                   </div>
                 </div>

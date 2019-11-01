@@ -41,8 +41,11 @@ $(document).ready(function(){
   });
   //função listar
   listar();
+   listarMenu();
+});
+$(document).ready(function(){
   //funçãolistar restaurante   
-  listarRestaurante();
+  listarMenu();
 });
 function listar(){
     $.ajax({
@@ -57,14 +60,16 @@ function listar(){
     }
   })
 }
-function listarRestaurante(){
-  optionsCategories : [
+function listarMenu(){
+  var  optionsCategories = [
     {name:'Fast-Food'},
     {name:'Food-Truck'},
     {name :'Buffet'}
   ]
   let itemListaCategoria = '';
   $.each(optionsCategories,function(i,dados){
-      itemListaCategoria += "<option value='"+optionsCategories.name+"' nome='"+optionsCategories.nome+"'>"+optionsCategories.nome+"</option>";
+      itemListaCategoria += "<option value='"+optionsCategories.name+"' nome='"+optionsCategories.nome+"'>"+optionsCategories.name+"</option>";
       });
+  console.log(optionsCategories);
+  $("#listaMenu").html(itemListaCategoria);
 }
