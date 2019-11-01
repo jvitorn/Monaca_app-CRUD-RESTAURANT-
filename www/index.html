@@ -34,18 +34,17 @@
           </div>
           <div class="row mt-4">
             <div class="col-md-8 offset-md-2">
-              <form method="post" id="cRestaurant">
+           
                 <!-- nome -->
                 <div class="form-group">
                   <div class="input-group input-group-lg">
-                    <input type="text" class="form-control bg-dark text-center" name="nameRestaurant"placeholder="Nome Do Restaurante" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control bg-dark  text-warning text-center" id="restaurants"  placeholder="Nome Do Restaurante" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
                 </div>
                 <!-- categorias -->
                 <div class="input-group mb-3">
                   <div class="input-group input-group-lg">  
-                    <select class="custom-select  bg-dark" id="listaMenu">
-                      <option selected>Categoria...</option>
+                    <select class="custom-select  bg-dark  text-warning" id="listaMenu">
 
                     </select>
                   </div>
@@ -53,12 +52,12 @@
                 <!-- localização -->
                 <div class="form-group mb-5">
                   <div class="input-group input-group-lg">  
-                    <input type="text" class="form-control bg-dark text-warning text-center" placeholder="Localização" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control bg-dark text-warning text-center" id="localization" placeholder="Localização" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
                 </div>
-                <button class="btn btn-outline-warning btn-block btn-lg" id="cadastrarrestaurante">Cadastrar</button>
+                <button type="submit" class="btn btn-outline-warning btn-block btn-lg" id="cadastrarrestaurante">Cadastrar</button>
               </div>
-            </form>
+         
             <div class="col-md-12 mt-4 text-center mb-4">
               <div class="row">
                   <div class="col-4">-----------</div>

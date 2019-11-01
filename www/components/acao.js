@@ -2,13 +2,16 @@
 
 $(document).ready(function(){
  //ao clickar em cadastrar restaurante ira ativar esta função
-  $(document).on('click','#cadastrarrestaurante',function(){
+  $(document).on('submit','#cRestaurant',function(){
       //guardando informações dos inputs na variavel
-      var dados = $("#cRestaurant").serialize();
+      var dados = {
+          "restaurants":$("#restaurants").val(),
+          "localization":$("#localization").val()
+      }
       // mandando as informações dos inputs via ajax Post
       $.ajax({
         type:"post",
-        url:"crudrestaurante.000webhostapp.com/cadastrar.php",
+        url:"https://crudrestaurante.000webhostapp.com/cadastrar.php",
         data:dados,
         //se estiver concluido
         success:function(data){
@@ -67,9 +70,8 @@ function listarMenu(){
     {name :'Buffet'}
   ]
   let itemListaCategoria = '';
-  $.each(optionsCategories,function(i,dados){
-      itemListaCategoria += "<option value='"+optionsCategories.name+"' nome='"+optionsCategories.nome+"'>"+optionsCategories.name+"</option>";
+  $.each(optionsCategories,function(i,optionsCategories){
+      itemListaCategoria += "<option value='"+optionsCategories.name+"' name='categories'>"+optionsCategories.name+"</option>";
       });
-  console.log(optionsCategories);
   $("#listaMenu").html(itemListaCategoria);
 }
