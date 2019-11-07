@@ -2,11 +2,14 @@
 
 $(document).ready(function(){
  //ao clickar em cadastrar restaurante ira ativar esta função
-  $(document).on('submit','#cRestaurant',function(){
+  $(document).on('click','#cadastrarrestaurante',function(){
       //guardando informações dos inputs na variavel
       var dados = {
           "restaurants":$("#restaurants").val(),
-          "localization":$("#localization").val()
+          "categories":$("#listaMenu").val(),
+          "localization":$("#localization").val(),
+           "login":$("#cadastrarlogin").val(),
+            "password":$("#cadastrarsenha").val()
       }
       // mandando as informações dos inputs via ajax Post
       $.ajax({
@@ -16,6 +19,29 @@ $(document).ready(function(){
         //se estiver concluido
         success:function(data){
           console.log('cadastrado com sucesso');
+          document.location.href = 'listar.html';
+        },
+        //se tiver algum erro
+        error:function(data){
+          console.log(data);
+        }
+      });
+  });
+  //ao clickar em cadastrar restaurante ira ativar esta função
+  $(document).on('click','#login',function(){
+      //guardando informações dos inputs na variavel
+      var dados = {
+          "login":$("#login").val(),
+          "senha":$("#senha").val()
+      }
+      // mandando as informações dos inputs via ajax Post
+      $.ajax({
+        type:"post",
+        url:"https://crudrestaurante.000webhostapp.com/login.php",
+        data:dados,
+        //se estiver concluido
+        success:function(data){
+          document.location.href = 'restaurantes.html';
         },
         //se tiver algum erro
         error:function(data){
@@ -26,7 +52,11 @@ $(document).ready(function(){
    //ao clickar em cadastrar restaurante ira ativar esta função
   $(document).on('click','#cadastrarmenu',function(){
       //guardando informações dos inputs na variavel
-      var dados = $("#cMenu").serialize();
+      var dados = {
+        "restaurants":$("#").val(),
+        "items":$("#").val(),
+        "prices":$("#").val()
+      }
       // mandando as informações dos inputs via ajax Post
       $.ajax({
         type:"post",
@@ -53,7 +83,7 @@ $(document).ready(function(){
 function listar(){
     $.ajax({
     type:'post',
-    url:'ncrudrestaurante.000webhostapp.com/listar.php',
+    url:'crudrestaurante.000webhostapp.com/listar.php',
     dataType:'json',
     success:function(data){
       let itemLista = '';

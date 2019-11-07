@@ -36,24 +36,21 @@
               <!-- nome -->
               <div class="form-group">
                 <div class="input-group input-group-lg">
-                  <input type="text" class="form-control bg-dark text-center" placeholder="Nome Do Restaurante" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control bg-dark text-center" id="nome" placeholder="Nome Do Restaurante" aria-label="Username" aria-describedby="basic-addon1" readonly>
                 </div>
               </div>
               <!-- categorias -->
               <div class="input-group mb-3">
                 <div class="input-group input-group-lg">  
-                  <select class="custom-select  bg-dark" id="inputGroupSelect01">
-                    <option selected>Categoria...</option>
-                    <option value="1">Um</option>
-                    <option value="2">Dois</option>
-                    <option value="3">Três</option>
+                  <select class="custom-select  bg-dark" id="listaCategoria">
+                    
                   </select>
                 </div>
               </div>
               <!-- localização -->
               <div class="form-group mb-5">
                 <div class="input-group input-group-lg">  
-                  <input type="text" class="form-control bg-dark text-warning text-center" placeholder="Localização" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control bg-dark text-warning text-center" placeholder="Localização" aria-label="Username" aria-describedby="basic-addon1" id="localizacao" readonly>
                 </div>
               </div>
               <button class="btn btn-outline-success btn-block btn-lg">Enviar</button>
@@ -76,7 +73,7 @@
               </div>
             </div>
             <div class="col-md-8 offset-md-2">
-              <a class="btn btn-outline-danger btn-block btn-lg" href="menu.html">Cadastrar Menu</a>
+              <a class="btn btn-outline-danger btn-block btn-lg" href="restaurantes.html">Cadastrar Restaurante</a>
             </div>
           </div>
         </div>
